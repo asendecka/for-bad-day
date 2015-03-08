@@ -11,6 +11,16 @@ p.quote {
     margin: 15% auto;
     text-align: center;
     width: 50%;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+div.content {
+    display: table;
+    height: 100%;
+    width: 50%;
+    margin-left: 25%;
 }
 
 .corner {
@@ -43,4 +53,35 @@ p.quote {
     background-image: url('/static/img/right_bottom.png');
     background-position-x: 100%;
     background-position-y: 100%;
+}
+
+/* 
+--------------
+Responsiveness
+--------------
+*/
+@media (max-width: 725px) {
+    .top-left {
+        background-image: url('/static/img/cloud.png');
+        background-position-x: 10%;
+        background-position-y: 10%;
+    }
+
+    .top-right {
+        background-image: url('/static/img/cloud_3.png');
+        background-position-x: 100%;
+        background-position-y: 0;
+    }
+
+    .bottom-left {
+        background-image: url('/static/img/cloud_2.png');
+        background-position-x: 0%;
+        background-position-y: 90%;
+    }
+
+    .bottom-right {
+        background-image: url('/static/img/bird.png');
+        background-position-x: 90%;
+        background-position-y: 95%;
+    } 
 }
