@@ -1,0 +1,46 @@
+body {
+    background-color: #1D1D1D;
+    background-image: url('/static/img/blackboard_background.png');
+    color: #DFDFDE;
+    font-family: 'Amatic SC', cursive;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+p.quote {
+    margin: 15% auto;
+    text-align: center;
+    width: 50%;
+}
+
+.corner {
+    background-repeat: no-repeat;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.top-left {
+    background-image: url('/static/img/left_top.png');
+    background-position-x: 0;
+    background-position-y: 0;
+}
+
+.top-right {
+    background-image: url('/static/img/right_top.png');
+    background-position-x: 100%;
+    background-position-y: 0;
+}
+
+.bottom-left {
+    background-image: url('/static/img/left_bottom.png');
+    background-position-x: 0;
+    background-position-y: 100%;
+}
+
+.bottom-right {
+    background-image: url('/static/img/right_bottom.png');
+    background-position-x: 100%;
+    background-position-y: 100%;
+}
