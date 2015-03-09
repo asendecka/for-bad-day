@@ -4,7 +4,9 @@ from .models import Quote
 from .forms import QuoteForm
 
 def quote(request):
-    quote = Quote.moderated.order_by('?')[0]
+    quote = None
+    if Quote.moderated.exists():
+        quote = Quote.moderated.order_by('?')[0]
     return render(request, 'quotes/quote.html', {'quote': quote})
 
 def add_quote(request):
