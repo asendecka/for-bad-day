@@ -1,19 +1,6 @@
-{% load i18n %}
-{% load staticfiles %}
-
-<html>
-    <head>
-        <link rel="stylesheet" href="{% static 'css/quotes.css' %}">
-        <link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
-        <title>{% trans "For a bad coding day" %}</title>
-    </head>
-    <body>
-        <div class="top-left corner"></div>
-        <div class="top-right corner"></div>
-        <div class="bottom-left corner"></div>
-        <div class="bottom-right corner"></div>
-        <div class="content">
-            <p class="quote">{{ quote }}</p>
-        </div>
-    </body>
-</html>
+{% extends 'quotes/base.html' %}
+{% block content %}
+    <div class="content">
+        <p class="quote">{{ quote }}</p>
+    </div>
+{% endblock %}

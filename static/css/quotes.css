@@ -7,7 +7,7 @@ body {
     margin: 0;
 }
 
-p.quote {
+.quote {
     margin: 15% auto;
     text-align: center;
     width: 50%;
@@ -53,6 +53,112 @@ div.content {
     background-image: url('/static/img/right_bottom.png');
     background-position-x: 100%;
     background-position-y: 100%;
+}
+
+.thank-you {
+    background-image: url('/static/img/heart.png');
+    background-position-x: -35px;
+    display: block;
+    height: 100px;
+    margin: auto;
+    width: 110px;
+    position: relative;
+}
+
+.quote a {
+    position: relative;
+}
+
+.thank-you:hover {
+    background-image: url('/static/img/heart_2.png');
+}
+
+a, a:hover, a:active {
+    color: #DFDFDE;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.add {
+    position: absolute;
+    z-index: 10;
+    right: 29px;
+    top: 95px;
+    color: transparent;
+    cursor: pointer;
+}
+
+.add a {
+    color: transparent;
+}
+
+.add:hover, .add:hover a {
+    visibility: 0;
+    color: rgb(213, 174, 52);
+    font-size: 1em;
+}
+
+.add:hover img {
+    opacity: 0.5;
+}
+
+.add span {
+    position: absolute;
+    top: 19px;
+    left: -69px;
+}
+
+/*
+-----
+Forms
+-----
+*/
+
+form {
+    position: absolute;
+}
+
+textarea {
+    background: transparent;
+    border-color: transparent;
+    border: 0;
+    color: #DFDFDE;
+    font-family: 'Amatic SC', cursive;
+    font-size: 0.9em;
+    outline: none;
+    overflow: auto;
+}
+
+input {
+    -webkit-appearance: none;
+    -webkit-background-clip: border-box;
+    -webkit-background-origin: padding-box;
+    -webkit-background-size: auto;
+    -webkit-font-smoothing: subpixel-antialiased;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgb(213, 174, 52);
+    background-image: none;
+    background-origin: padding-box;
+    background-size: auto;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-style: none;
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-style: none;
+    border-top-width: 0px;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0.8em;
+    padding: 10px 20px;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
 }
 
 /* 

@@ -1,0 +1,11 @@
+{% extends 'quotes/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="content">
+        <p class="quote">
+            <a href="{% url 'home' %}">Thank you!</a>
+            <span class="thank-you"></span>
+        </p>
+    </div>
+{% endblock %}
