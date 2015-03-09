@@ -1,9 +1,14 @@
 {% extends 'quotes/base.html' %}
+{% load staticfiles %}
+
+{% block add_quote %}
+{% endblock %}
 {% block content %}
     <div class="content">
         <form method="POST" class="quote">{% csrf_token %}
             {{ form.text }}<br/>
-            <input type="submit" value="Add">
+            <input type="submit" value="Add"><br/>
+            <a href="{% url 'home' %}"><img id="back" src="{% static 'img/back.png' %}"/></a>
         </form>
     </div>
 {% endblock %}

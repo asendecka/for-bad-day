@@ -1,18 +1,23 @@
-{% load i18n %}
-{% load staticfiles %}
+{% load i18n staticfiles %}
 
 <html>
     <head>
         <link rel="stylesheet" href="{% static 'css/quotes.css' %}">
         <link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favico/favicon-32x32.png' %}">
         <title>{% trans "For a bad coding day" %}</title>
     </head>
     <body>
         <div class="top-left corner"></div>
         <div class="top-right corner">
+        {% block add_quote %}
         <div class="add"><a href="{% url 'add' %}">
-            <span>Add quote!</span><img src="{% static 'img/star.png' %}"/>
+            <span>Add quote!</span><img id="add-quote" src="{% static 'img/star.png' %}"/>
         </a></div>
+        <div class="add-small"><a href="{% url 'add' %}">
+            <span>Add quote!</span><img id="add-quote" src="{% static 'img/bird_yellow.png' %}"/>
+        </a></div>
+        {% endblock %}
         </div>
         <div class="bottom-left corner"></div>
         <div class="bottom-right corner"></div>

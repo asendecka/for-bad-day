@@ -1,6 +1,10 @@
 {% extends 'quotes/base.html' %}
+{% load staticfiles %}
 {% block content %}
     <div class="content">
-        <p class="quote">{{ quote }}</p>
+        <p class="quote">
+            {{ quote }}<br/>
+            <a href="{% url 'home' %}"><img src="{% static 'img/retry.png' %}" id="next-quote"/></a>
+        </p>
     </div>
 {% endblock %}

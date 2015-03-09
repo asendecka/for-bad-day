@@ -87,27 +87,67 @@ a, a:hover, a:active {
     color: transparent;
     cursor: pointer;
 }
+    
+.add-small {
+    display: none;
+}
 
-.add a {
+.add a, .add-small a {
     color: transparent;
 }
 
-.add:hover, .add:hover a {
+.add:hover, .add:hover a, .add-small:hover, .add-small:hover a {
     visibility: 0;
     color: rgb(213, 174, 52);
     font-size: 1em;
 }
 
-.add:hover img {
-    opacity: 0.5;
-}
-
 .add span {
     position: absolute;
     top: 19px;
-    left: -69px;
+    left: -78px;
 }
 
+/*
+--------------------------
+Refresh, add, back buttons
+--------------------------
+*/
+
+#next-quote, #back {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+#next-quote:hover, #back:hover {
+    opacity: 1;
+    -ms-transform: rotate(12deg); /* IE 9 */
+    -webkit-transform: rotate(12deg); /* Chrome, Safari, Opera */
+    transform: rotate(12deg);
+}
+
+#next-quote:active, #back:active {
+    -ms-transform: rotate(24deg); /* IE 9 */
+    -webkit-transform: rotate(24deg); /* Chrome, Safari, Opera */
+    transform: rotate(24deg);
+}
+
+#add {
+    opactiy: 0.7;
+}
+
+#add-quote:hover {
+    opacity: 1;
+    -ms-transform: scale(1.1, 1.1), /* IE 9 */
+    -webkit-transform: scale(1.1, 1.1); /* Chrome, Safari, Opera */
+    transform: scale(1.1, 1.1);
+}
+
+#add-quote:active {
+    -ms-transform: scale(1.2, 1.2), /* IE 9 */
+    -webkit-transform: scale(1.2, 1.2); /* Chrome, Safari, Opera */
+    transform: scale(1.2, 1.2);
+}
 /*
 -----
 Forms
@@ -186,8 +226,24 @@ Responsiveness
     }
 
     .bottom-right {
-        background-image: url('/static/img/bird.png');
-        background-position-x: 90%;
-        background-position-y: 95%;
+        background-image: none;
     } 
+
+    .add {
+        display: none;
+    }
+
+    .add-small {
+        display: block;
+        position: absolute;
+        z-index: 10;
+        right: 37px;
+        bottom: 19px;
+        color: transparent;
+        cursor: pointer;
+    }
+
+    textarea {
+        margin-top: 60px;
+    }
 }

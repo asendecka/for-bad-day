@@ -4,14 +4,15 @@ from .models import Quote
 from .forms import QuoteForm
 
 def quote(request):
-    quote = Quote.objects.order_by('?')[0]
+    quote = Quote.moderated.order_by('?')[0]
     return render(request, 'quotes/quote.html', {'quote': quote})
 
 def add_quote(request):
     if request.method == "POST":
         form = QuoteForm(request.POST)
         if form.is_valid():
-            form.save()
+            instance = form.save()
+            print instance
             return redirect('thanks')
     else:
         form = QuoteForm()
