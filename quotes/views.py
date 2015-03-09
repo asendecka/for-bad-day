@@ -12,7 +12,6 @@ def add_quote(request):
         form = QuoteForm(request.POST)
         if form.is_valid():
             instance = form.save()
-            print instance
             return redirect('thanks')
     else:
         form = QuoteForm()

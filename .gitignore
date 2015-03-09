@@ -55,3 +55,7 @@ target/
 
 .DS_Store
 db.sqlite3
+myvenv
+__pycache__
+staticfiles
+local_settings.py
